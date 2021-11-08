@@ -1,46 +1,114 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="一休度チェッカー"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
 
-「走るか寝るかするメロス」[l][r]
+[bg storage=bridge.png time=500]
 
-メロスは激怒した。[l][r]
+「このはしわたるべからず」[l][r]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
+あなたはどうしますか？[l][r]
 
-(中略)[l][r]
-
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
-
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[link target=*tag_bad_1] →橋を渡らない [endlink][r]
+[link target=*tag_good_1] →橋の中央を渡る [endlink][r]
 [s]
-
-*tag_sleep
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
+*tag_bad_1
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
+[bg storage=tiger.png time=500]
 
-【 BAD END 】[l][cm]
+[cm]
+
+「屏風の中のトラを縛り上げよ」[l][r]
+
+あなたはどうしますか？[l][r]
+
+[link target=*tag_bad_1_bad_2] →「何を言ってるのか」と冷たい視線を向ける [endlink][r]
+[link target=*tag_bad_1_good_2] →「では、トラを屏風から追い出してくれ」という [endlink][r]
+[s]
+
+
+*tag_good_1
+
+[bg storage=tiger.png time=500]
+
+[cm]
+
+「屏風の中のトラを縛り上げよ」[l][r]
+
+あなたはどうしますか？[l][r]
+
+[link target=*tag_good_1_bad_2] →「何を言ってるのか」と冷たい視線を向ける [endlink][r]
+[link target=*tag_good_1_good_2] →「では、トラを屏風から追い出してくれ」という [endlink][r]
+[s]
+
+*tag_bad_1_bad_2
+
+[cm]
+
+あなたの一休度は...[l][r]
+
+0/100[r]
+
+です[r][l]
+
+一休度の向上を目指してください[l]
+
+[cm]
 
 [jump target=*start]
 
-*tag_run
 
-[bg storage=run.jpg time=500]
+*tag_bad_1_good_2
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
 
-【 GOOD END 】[l][cm]
+あなたの一休度は...[l][r]
+
+50/100[r]
+
+です[r][l]
+
+一休度をさらに磨きましょう！[l]
+
+[cm]
+
+[jump target=*start]
+
+
+*tag_good_1_bad_2
+
+[cm]
+
+あなたの一休度は...[l][r]
+
+50/100[r]
+
+です[r][l]
+
+一休度をさらに磨きましょう！[l]
+
+[cm]
+
+[jump target=*start]
+
+
+*tag_good_1_good_2
+
+[cm]
+
+あなたの一休度は...[l][r]
+
+100/100[r]
+
+です[r][l]
+
+素晴らしい一休度ですね！[l]
+
+[cm]
 
 [jump target=*start]
